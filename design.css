@@ -111,24 +111,15 @@ b{
 .wrapper{
     display: flex;
     width: 100%;
-    height: calc(100vh - 80px);
+    height: 100%;
     justify-content: center;
     align-items: center;
     padding: 0 10%;
     overflow: hidden;
+    background: linear-gradient(45deg,rgb(67, 226, 139),red);
 }
 
-.wrapper::before{
-    position: absolute;
-    content: '';
-    height: 600px;
-    width: 600px;
-    border-radius: 50%;
-    left: -12%;
-    top: 40%;
-    background: linear-gradient(45deg,blue,red);
-    animation: object1 6s linear infinite;
-}
+
 
 .cols{
     width: 50%;
@@ -253,21 +244,21 @@ section{
 #home{
     position: relative;
     width: 100%;
-    background-color: beige;
     
 }
 #about{
     position: relative;
     width: 100%;
-    background-color: beige;
+    background: linear-gradient(45deg,rgb(67, 226, 139),red);
+    
 }
 #skills{
     position: relative;
     width: 100%;
-    background-color: beige;
+    background: linear-gradient(45deg,rgb(67, 226, 139),red);
 }
 #hobby{
     position: relative;
     width: 100%;
-    background-color: beige;
+    background: linear-gradient(45deg,rgb(67, 226, 139),red);
 }
