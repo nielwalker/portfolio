@@ -1,0 +1,99 @@
+
+SHOW DATABASES
+show databases;
++--------------------+
+| Database           |
++--------------------+
+| amitdb1            |
+| balances           |
+| banking            |
+| bankmanagement     |
+| clientdb           |
+| historydb          |
+| information_schema |
+| mysql              |
+| performance_schema |
+| sakila             |
+| supermarketdb      |
+| sys                |
+| world              |
++--------------------+
+
+
+CHANGE DATABASE
+mysql> use supermarketdb;
+Database changed
+
+
+
+DISPLAY TABLES
+show tables;
++-------------------------+
+| Tables_in_supermarketdb |
++-------------------------+
+| customer                |
+| orders                  |
+| salesman                |
++-------------------------+
+
+
+
+
+
+DESCRIBE TABLE
+desc customer;
++-------------+-------------+------+-----+---------+-------+
+| Field       | Type        | Null | Key | Default | Extra |
++-------------+-------------+------+-----+---------+-------+
+| customer_id | int         | NO   | PRI | NULL    |       |
+| cust_name   | varchar(50) | YES  |     | NULL    |       |
+| city        | varchar(50) | YES  |     | NULL    |       |
+| grade       | double      | YES  |     | NULL    |       |
+| salesman_id | int         | YES  |     | NULL    |       |
++-------------+-------------+------+-----+---------+-------+
+
+
+
+update customer set cust_name='niel' where customer_id=3001;
+
+
+
+
+DISPLAY DATA FROM TABLE
+select * from customer;
++-------------+----------------+------------+-------+-------------+
+| customer_id | cust_name      | city       | grade | salesman_id |
++-------------+----------------+------------+-------+-------------+
+|        3001 | Brad Guzan     | London     |  NULL |        5005 |
+|        3002 | Nick Rimando   | New York   |   100 |        5001 |
+|        3003 | Jozy Altidor   | Moskow     |   200 |        5007 |
+|        3004 | Fabian Johnson | Paris      |   300 |        5006 |
+|        3005 | Graham Zusi    | California |   200 |        5002 |
+|        3007 | Brad Davis     | New York   |   200 |        5001 |
+|        3008 | Julian Green   | London     |   300 |        5002 |
+|        3009 | Geoff Cameron  | Berlin     |   100 |        5003 |
++-------------+----------------+------------+-------+-------------+
+
+
+
+
+
+
+1. select s.name as salesman,c.cust_name,s.city from salesman s inner join customer c on s.city = c.city;
++------------+----------------+----------+
+| salesman   | cust_name      | city     |
++------------+----------------+----------+
+| Pit Alex   | Brad Guzan     | London   |
+| James Hoog | Nick Rimando   | New York |
+| Mc Lyon    | Fabian Johnson | Paris    |
+| Nail Knite | Fabian Johnson | Paris    |
+| James Hoog | Brad Davis     | New York |
+| Pit Alex   | Julian Green   | London   |
++------------+----------------+----------+
+
+
+2. From the following tables write a SQL query to find those orders where order amount exists between
+500 and 2000. Return ord_no, purch_amt, cust_name, and city.
+
+SELECT o.ord_no,o.purch_amt,c.cust_name,c.city FROM orders o JOIN customer c ON o.cust_code = c.cust_code WHERE o.purch_amt BETWEEN 500 AND 2000;
+
