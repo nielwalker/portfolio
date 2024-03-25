@@ -16,15 +16,36 @@
     left: 150px;
 }
 
+.container_typing{
+    display: inline-block;
+}
 #typing_name{
-    color: beige;
+    color: rgb(14, 17, 202);
     position: absolute;
     top: 290px;
     left: 350px;
-    -webkit-text-stroke: 0.1vw grey;
     border-right: 5px solid;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 2s steps(4),
+    cursor .4s step-end infinite alternate;
+
+}
+
+@keyframes cursor {
+    50%{
+        border-color: transparent;
+    }
     
 }
+
+@keyframes typing {
+    50%{
+        border-color: transparent;
+    }
+    
+}
+
 
 
 
@@ -131,20 +152,14 @@ b{
 
 .topline{
     display: block;
-    position: relative;
+    position: absolute;
+    top: 370px;
+    left: 155px;
     font-size: 35px;
     letter-spacing: 5px;
     color: blue;
 }
 
-.topline::after{
-    position: absolute;
-    content: '';
-    height: 4px;
-    width: 45px;
-    bottom: 10px;
-    background-color: blue;
-}
 
 h1{
     display: block;
@@ -200,23 +215,23 @@ button::after{
     position: relative;
     height: 100%;
     width: calc(130% - 80px);
-    top: 5%;
-    right: 20px;
+    top: 3%;
+    right: 15px;
     transform: rotateY(180deg);
     animation: animateUser 5s linear infinite;
 }
 
 @keyframes animateUser{
-    50%{
-        right: 5px;
-        top: 5px;
+    30%{
+        right: 3px;
+        top: 3px;
     }
 }
 
 .imgbox #splash{
     position: absolute;
-    top: 5%;
-    left: 20px;
+    top: 3%;
+    left: 10px;
     height: 100%;
     transform: translate(-20%,-3%) rotate(-35deg);
     width: 170%;
@@ -225,7 +240,7 @@ button::after{
 }
 
 @keyframes animate{
-    50%{
+    30%{
         top: 3px;
         left: 3px;
     }
