@@ -368,3 +368,7 @@ section{
     }
   }
   
+  .content-about{
+    position: absolute;
+    left: 850px;
+  }
