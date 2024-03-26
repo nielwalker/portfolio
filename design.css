@@ -368,7 +368,48 @@ section{
     }
   }
   
-  .content-about{
+.content-about{
+position: absolute;
+left: 850px;
+}
+
+
+.items{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    z-index: 123;
+    
+    
+    
+    
+}
+
+.items .item1{
+    position: relative;
+    border: 3px solid black;
+    margin: 25px;
+    padding: 150px;
+    border-radius: 30px;
+}
+
+.items .item2{
+    position: relative;
+    border: 3px solid black;
+    padding: 150px;
+    margin: 25px;
+    border-radius: 30px;
+}
+
+.items .item3{
+    position: relative;
+    border: 3px solid black;
+    padding: 150px;
+    margin: 25px;
+    border-radius: 30px;
+}
+
+.items #title-skills{
     position: absolute;
-    left: 850px;
-  }
+    top: -250px;
+}
