@@ -4,49 +4,86 @@
     font-family: 'poppins',sans-serif;
 }
 
+
+.wrapper2{
+    display: inline-flex;
+    position: absolute;
+    top: 390px;
+    left: 130px;
+    z-index: 1;
+    padding-left: 90px;
+    padding-right: 10px;
+    background-color: beige;
+    
+}
+
+.wrapper2 .static-txt{
+    font-size: 80px;
+    color: rgb(5, 5, 10);
+    font-weight: 400;
+    position: absolute;
+    top: 23px;
+    left: 20px;
+    
+}
+
+.wrapper2 .dynamic-txts {
+    margin-left: 10px;
+    height: 90px;
+    line-height: 90px;
+    overflow: hidden;
+    color: blue;
+    
+}
+
+.dynamic-txts li{
+    list-style: none;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 70px;
+    font-weight: 500;
+    position: relative;
+    top: 10px;
+    animation: slide 6s steps(1) infinite;
+    
+}
+
+@keyframes slide {
+    100%{
+        top: -350px;
+    }
+    
+}
+
+.dynamic-txts li span{
+    position: relative;
+}
+
+.dynamic-txts li span::after{
+    left: 0;
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-left: 3px solid blue;
+    padding-top: 100px;
+    animation: typing 5s steps(13)infinite;
+    background-color: beige;
+}
+
+@keyframes typing {
+    100%{
+        left: 100%;
+        margin: 0 -35px 0 35px;
+    }
+    
+}
+
 #motto{
     position: absolute;
     top: 500px;
     left: 150px;
+    text-align: start;
 }
-
-#im{
-    position: absolute;
-    top: 290px;
-    left: 150px;
-}
-
-.container_typing{
-    display: inline-block;
-}
-#typing_name{
-    color: rgb(14, 17, 202);
-    position: absolute;
-    top: 290px;
-    left: 350px;
-    border-right: 5px solid;
-    white-space: nowrap;
-    overflow: hidden;
-    animation: typing 2s steps(4),
-    cursor .4s step-end infinite alternate;
-
-}
-
-@keyframes cursor {
-    50%{
-        border-color: transparent;
-    }
-    
-}
-
-@keyframes typing {
-    50%{
-        border-color: transparent;
-    }
-    
-}
-
-
 
 
 html{
@@ -97,11 +134,24 @@ b{
 
 .navitems{
     display: flex;
-
+    position: absolute;
+    left: 760px;
+    top: -20px;
 }
+
+.nickname{
+    position: absolute;
+    display:flex;
+    top: -40px;
+    left: 90px;
+    font-size:30px;
+    
+    
+}
+
 .navitems li{
     list-style: none;
-    margin: 0 15px;
+    margin: 0 10px;
 
 }
 
@@ -116,10 +166,11 @@ b{
 }
 
 .navitems li:hover a {
-    font-size: 70;
+    font-size: 40;
     color: blue;
     font-size: 40px;
     font-weight: 800;
+    
 }
 
 .links a{
@@ -137,7 +188,7 @@ b{
     align-items: center;
     padding: 0 10%;
     overflow: hidden;
-    background: linear-gradient(45deg,rgb(67, 226, 139),red);
+    background: beige;
 }
 
 
@@ -179,8 +230,8 @@ p{
 .btns{
     width: 100%;
     position: absolute;
-    top: 650px;
-    left: 250px;
+    top: 640px;
+    left: 550px;
 }
 
 button{
@@ -204,11 +255,11 @@ button::after{
 
 .imgbox{
     position: absolute;
-    top: -10px;
-    left: 700px;
-    height: 820px;
-    width: 550px;
-    padding: 0%;
+    top: 140px;
+    left: 1100px;
+    height: 900px;
+    width: 600px;
+    padding: 0;
 }
 
 .imgbox #niel_image{
@@ -216,7 +267,7 @@ button::after{
     height: 100%;
     width: calc(130% - 80px);
     top: 3%;
-    right: 15px;
+    right: 5px;
     transform: rotateY(180deg);
     animation: animateUser 5s linear infinite;
 }
@@ -224,7 +275,7 @@ button::after{
 @keyframes animateUser{
     30%{
         right: 3px;
-        top: 3px;
+        top: 15px;
     }
 }
 
@@ -241,8 +292,8 @@ button::after{
 
 @keyframes animate{
     30%{
-        top: 3px;
-        left: 3px;
+        top: 20px;
+        left: 20px;
     }
 }
 
@@ -264,16 +315,56 @@ section{
 #about{
     position: relative;
     width: 100%;
-    background: linear-gradient(45deg,rgb(67, 226, 139),red);
+    background:beige;
     
 }
 #skills{
     position: relative;
     width: 100%;
-    background: linear-gradient(45deg,rgb(67, 226, 139),red);
+    background:beige;
 }
 #hobby{
     position: relative;
     width: 100%;
-    background: linear-gradient(45deg,rgb(67, 226, 139),red);
+    background:beige;
 }
+#contact{
+    position: relative;
+    width: 100%;
+    background:beige;
+}
+
+.picture_frame{
+    border: 2px solid blue;
+    height: 800px;
+    width: 620px;
+    position: absolute;
+    left: 120px;
+    top: 120px;
+    overflow: hidden;
+    border: 2px solid transparent; 
+    border-radius: 5px; 
+    animation: glowing 2s infinite; 
+}
+
+.picture_frame #back-portion{
+    position: absolute;
+    top: 90px;
+    left: -3px;
+    height: 750px;
+    
+}
+
+/* Define the glow effect animation */
+@keyframes glowing {
+    0% { 
+      box-shadow: 0 0 10px 0 rgba(0,0,0,0.5); 
+    }
+    50% {
+      box-shadow: 0 0 20px 10px rgba(85, 84, 84, 0.5);
+    }
+    100% {
+      box-shadow: 0 0 10px 0 rgba(0,0,0,0.5); 
+    }
+  }
+  
