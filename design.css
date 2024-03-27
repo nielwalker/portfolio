@@ -114,6 +114,7 @@ body{
     line-height: 80px;
     padding: 0px;
     position: fixed;
+    filter: drop-shadow(10px 10px 10px grey);
 }
 
 .name{
@@ -355,7 +356,6 @@ section{
     
 }
 
-/* Define the glow effect animation */
 @keyframes glowing {
     0% { 
       box-shadow: 0 0 10px 0 rgba(0,0,0,0.5); 
@@ -366,7 +366,7 @@ section{
     100% {
       box-shadow: 0 0 10px 0 rgba(0,0,0,0.5); 
     }
-  }
+}
   
 .content-about{
 position: absolute;
@@ -383,26 +383,41 @@ left: 850px;
 
 .items .item1{
     position: relative;
-    border: 3px solid black;
-    margin: 25px;
+    border: 1px solid black;
     padding: 190px;
+    margin: 25px;
     border-radius: 30px;
+    animation: trigger1 2s infinite; 
 }
 
 .items .item2{
     position: relative;
-    border: 3px solid black;
+    border: 1px solid black;
     padding: 190px;
     margin: 25px;
     border-radius: 30px;
+    animation: trigger1 2s infinite; 
 }
 
 .items .item3{
     position: relative;
-    border: 3px solid black;
+    border: 1px solid black;
     padding: 190px;
     margin: 25px;
     border-radius: 30px;
+    animation: trigger1 2s infinite; 
+}
+
+@keyframes trigger1 {
+    0% { 
+      box-shadow: 0 0 10px 0 rgba(24, 6, 180, 0.5); 
+    }
+    50% {
+      box-shadow: 0 0 20px 10px rgba(3, 76, 187, 0.5);
+    }
+    100% {
+      box-shadow: 0 0 10px 0 rgba(44, 3, 189, 0.5); 
+    }
 }
 
 .item1 #more_btn{
@@ -419,7 +434,7 @@ left: 850px;
 #more_btn:hover{
     background-color: blue;
     color: white;
-    transition: 0.4s ease-in-out;
+    transition: 0.4s ease-in;
 }
 
 .item2 #graphic_btn{
@@ -436,7 +451,7 @@ left: 850px;
 #graphic_btn:hover{
     background-color: blue;
     color: white;
-    transition: 0.4s ease-in-out;
+    transition: 0.4s ease-in;
 }
 
 .item3 #backend_btn{
@@ -453,22 +468,27 @@ left: 850px;
 #backend_btn:hover{
     background-color: blue;
     color: white;
-    transition: 0.4s ease-in-out;
+    transition: 0.4s ease-in;
 }
 
 .item1{
+    width: 480px;
     background-image: url("web-design.jpg");
     background-size: cover;
     background-position: center;
 }
 
+
+
 .item2{
+    width: 480px;
     background-image: url("graphic-design.jpg");
     background-size: cover;
     background-position: center;
 }
 
 .item3{
+    width: 480px;
     background-image: url("backend.jpg");
     background-size: cover;
     background-position: center;
@@ -477,7 +497,24 @@ left: 850px;
 #title_item1{
     position: absolute;
     top: 210px;
-    left: 270px;
+    left: 350px;
     font-size: 50px;
     color: blue;
 }
+
+#title_item2{
+    position: absolute;
+    top: 210px;
+    left: 830px;
+    font-size: 50px;
+    color: blue;
+}
+
+#title_item3{
+    position: absolute;
+    top: 210px;
+    left: 1350px;
+    font-size: 50px;
+    color: blue;
+}
+
