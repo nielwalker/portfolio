@@ -119,58 +119,62 @@
         </section>
 
         <section id="hobby">
-            <h1> THis is hobby</h1>
+            <div class="section1">
+                <div class="img-slider">
+                  <img src="motorcycle.jpg" alt="" class="img">
+                  <img src="camping.jpg" alt="" class="img">
+                  <img src="travel.jpg" alt="" class="img">
+                  <img src="cooking.jpg" alt="" class="img">
+                  <img src="computer-games.jpg" alt="" class="img">
+                </div>
+              </div>
         </section>
 
         <section id="contact">
-            <h1 class="section-header">Reach Me Out</h1>
+            <div class="contact-form">
   
-            <div class="contact-wrapper">
-                
-                <form id="contact-form" class="form-horizontal" role="form">
-                
-                <div class="form-group">
-                    <div class="col-sm-12">
-                    <input type="text" class="form-control" id="name" placeholder="NAME" name="name" value="" required>
-                    </div>
-                </div>
+                <form class="form1">
 
-                <div class="form-group">
-                    <div class="col-sm-12">
-                    <input type="email" class="form-control" id="email" placeholder="EMAIL" name="email" value="" required>
-                    </div>
-                </div>
+                    <div class="three-entry-box">
 
-                <textarea class="form-control" rows="10" placeholder="MESSAGE" name="message" required></textarea>
-                
-                <button class="btn btn-primary send-button" id="submit" type="submit" value="SEND">
-                    <div class="alt-send-button">
-                        <i class="fa fa-paper-plane">
+                        <div class="firtsname-box">
+                            <input class="fname-entry" id="fname-id" type="text" placeholder="Firstname" size="30">
+                            <p class="warning">Reach Me</p>
+                        </div>
 
-                        </i>
-                        <span class="send-text">
-                            SEND
-                        </span>
+                        <div class="lastname-box">
+                            <input class="lastname-entry" id="grid-last-name" type="text" placeholder="Lastname" size="30">
+                        </div>
+
+                        <div class="email-box">
+                            <input class="email-entry" id="grid-email" type="email" placeholder="Email" size="70">
+                        </div>
+
                     </div>
-                
-                </button>
-                
+
+                    <div class="message-boxandcheckbox">
+                        <label class="label-message" for="grid-password">
+                            Concern:
+                            </label>
+                        <div class="message-box">
+                            
+                            <textarea rows="15" class="message-area" placeholder="Message">
+                            </textarea>
+                        </div>
+
+                            <button id="button-message" type="submit">
+                                Send
+                            </button>
+                        
+                    </div>
                 </form>
-                
-                
             </div>
-        
         </section>
-
     </div>
 
     <footer>
-        
-        <div class="footer0">
-            <h1>NielWalker</h1>
-        </div>
         <div class="footer1 ">
-            Connect with me at
+            
             <div class="social-media">
                 <a href="https://www.facebook.com/nielwalkers">
                     <img src="facebook.png" id="fb-logo">
